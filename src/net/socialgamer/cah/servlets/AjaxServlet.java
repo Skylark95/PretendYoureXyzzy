@@ -23,16 +23,6 @@
 
 package net.socialgamer.cah.servlets;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Map;
-
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import net.socialgamer.cah.Constants.AjaxRequest;
 import net.socialgamer.cah.Constants.AjaxResponse;
 import net.socialgamer.cah.Constants.ErrorCode;
@@ -43,6 +33,15 @@ import net.socialgamer.cah.data.User;
 import net.socialgamer.cah.handlers.Handler;
 import net.socialgamer.cah.handlers.Handlers;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 
 /**
  * Servlet implementation class AjaxServlet.
@@ -51,7 +50,6 @@ import net.socialgamer.cah.handlers.Handlers;
  * 
  * @author Andy Janata (ajanata@socialgamer.net)
  */
-@WebServlet("/AjaxServlet")
 public class AjaxServlet extends CahServlet {
   private static final long serialVersionUID = 1L;
 

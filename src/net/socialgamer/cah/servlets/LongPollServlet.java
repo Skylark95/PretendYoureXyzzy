@@ -23,6 +23,13 @@
 
 package net.socialgamer.cah.servlets;
 
+import net.socialgamer.cah.Constants.LongPollEvent;
+import net.socialgamer.cah.Constants.LongPollResponse;
+import net.socialgamer.cah.Constants.ReturnableData;
+import net.socialgamer.cah.Constants.SessionAttribute;
+import net.socialgamer.cah.data.QueuedMessage;
+import net.socialgamer.cah.data.User;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -32,18 +39,10 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import net.socialgamer.cah.Constants.LongPollEvent;
-import net.socialgamer.cah.Constants.LongPollResponse;
-import net.socialgamer.cah.Constants.ReturnableData;
-import net.socialgamer.cah.Constants.SessionAttribute;
-import net.socialgamer.cah.data.QueuedMessage;
-import net.socialgamer.cah.data.User;
 
 
 /**
@@ -53,7 +52,6 @@ import net.socialgamer.cah.data.User;
  * 
  * @author Andy Janata (ajanata@socialgamer.net)
  */
-@WebServlet("/LongPollServlet")
 public class LongPollServlet extends CahServlet {
   private static final long serialVersionUID = 1L;
 
