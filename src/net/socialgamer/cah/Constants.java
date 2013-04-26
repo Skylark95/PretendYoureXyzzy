@@ -182,7 +182,8 @@ public class Constants {
     NAMES("gn"),
     PLAY_CARD("pc"),
     REGISTER("r"),
-    START_GAME("sg");
+    START_GAME("sg"),
+    RESET_CARDS("rc");
 
     private final String op;
 

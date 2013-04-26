@@ -23,20 +23,7 @@
 
 package net.socialgamer.cah.data;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import javax.annotation.Nullable;
+import com.google.inject.Inject;
 
 import net.socialgamer.cah.Constants.BlackCardData;
 import net.socialgamer.cah.Constants.ErrorCode;
@@ -57,7 +44,19 @@ import net.socialgamer.cah.db.WhiteCard;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 
-import com.google.inject.Inject;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Timer;
+import java.util.TimerTask;
+import javax.annotation.Nullable;
 
 
 /**
@@ -1231,6 +1230,17 @@ public class Game {
     } else {
       return null;
     }
+  }
+
+  public ErrorCode resetCardsForUser(final User user) {
+    final Player player = getPlayerForUser(user);
+
+    if (player != null) {
+      player.getHand().clear();
+    }
+
+    return null;
+
   }
 
   /**

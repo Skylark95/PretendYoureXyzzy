@@ -187,3 +187,7 @@ cah.ajax.SuccessHandlers[cah.$.AjaxOperation.KICK] = function(data) {
 cah.ajax.SuccessHandlers[cah.$.AjaxOperation.BAN] = function(data) {
   // pass
 };
+
+cah.ajax.SuccessHandlers[cah.$.AjaxOperation.RESET_CARDS] = function(data, req) {
+  // TODO
+};

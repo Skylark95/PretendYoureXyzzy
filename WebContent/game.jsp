@@ -255,6 +255,8 @@ HttpSession hSession = request.getSession(true);
     <div class="game_top">
       <input type="button" class="game_show_last_round game_menu_bar" value="Show Last Round"
           disabled="disabled" />
+      <input type="button" class="reset_cards game_menu_bar" value="Reset Cards"
+          disabled="disabled" />
       <input type="button" class="game_show_options game_menu_bar" value="Hide Game Options" />
       <div class="game_message">
         Waiting for server...
@@ -268,7 +270,7 @@ HttpSession hSession = request.getSession(true);
             <div class="game_black_card">
             </div>
           </div>
-          <input type="button" class="confirm_card" value="Confirm Selection" />
+          <input type="button" class="confirm_card" value="Confirm Selection" />        
         </div>
         <div class="game_options">
         </div>
